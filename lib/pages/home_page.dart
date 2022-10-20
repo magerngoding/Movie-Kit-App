@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 import 'package:movie_kit_app/widget/content_movie.dart';
@@ -39,8 +37,24 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                Container(
+                  height: 2,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: blackColor.withOpacity(0.1),
+                        blurRadius: 0.1,
+                        spreadRadius: 0.1,
+                        offset: Offset(0, 1),
+                      ),
+                    ],
+                  ),
+                  child: Divider(
+                    color: blackColor.withOpacity(0.1),
+                  ),
+                ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Container(
                   width: 340,
@@ -99,21 +113,38 @@ class HomePage extends StatelessWidget {
                   children: [
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ContentMovie(),
-                        ContentMovie(),
+                      children: [
+                        ContentMovie(
+                          imageUrl: 'assets/image_johnwick.png',
+                          title: 'John Wick 3',
+                          subtitle: 'Crime  • 2h 10m | R',
+                          isActive: true,
+                        ),
+                        ContentMovie(
+                          imageUrl: 'assets/image_bladerunner.png',
+                          title: 'Captain Marvel',
+                          subtitle: 'Action  • 2h 25m | PG-13',
+                          isActive: true,
+                        ),
                       ],
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 27,
-                ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ContentMovie(),
-                    ContentMovie(),
+                    ContentMovie(
+                      imageUrl: 'assets/image_alta.png',
+                      title: 'Alta Batle Angel',
+                      subtitle: 'Action  • 2h 25m | PG-13',
+                      isActive: true,
+                    ),
+                    ContentMovie(
+                      imageUrl: 'assets/image_avengers.png',
+                      title: 'Avengers',
+                      subtitle: 'Action  • 2h 25m | PG-13',
+                      isActive: true,
+                    ),
                   ],
                 ),
               ],

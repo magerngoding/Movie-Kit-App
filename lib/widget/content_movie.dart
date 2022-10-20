@@ -1,81 +1,104 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:movie_kit_app/pages/movie_detial_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 
 class ContentMovie extends StatelessWidget {
-  const ContentMovie({super.key});
+  final String imageUrl;
+  final String title;
+  final String subtitle;
+  final bool isActive;
+
+  ContentMovie({
+    required this.imageUrl,
+    required this.title,
+    required this.subtitle,
+    this.isActive = false,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                width: 164,
-                height: 250,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/image_johnwick.png'),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MovieDetailPage(),
+          ),
+        );
+      },
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 160,
+                  height: 250,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(imageUrl),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 18,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 18,
-          ),
-          Row(
-            children: [
-              Image.asset(
-                'assets/icon_star.png',
-                width: 14,
-              ),
-              Image.asset(
-                'assets/icon_star.png',
-                width: 14,
-              ),
-              Image.asset(
-                'assets/icon_star.png',
-                width: 14,
-              ),
-              Image.asset(
-                'assets/icon_star.png',
-                width: 14,
-              ),
-              Image.asset(
-                'assets/icon_star0.png',
-                width: 14,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 7,
-          ),
-          Text(
-            'John Wick 3',
-            style: blackTextStyle.copyWith(
-              fontSize: 16,
-              fontWeight: semiBold,
+                SizedBox(
+                  width: 18,
+                ),
+              ],
             ),
-          ),
-          SizedBox(
-            height: 4,
-          ),
-          Text(
-            'Crime . 2hr 10m | R',
-            style: blackTextStyle.copyWith(
-              fontSize: 12,
-              fontWeight: medium,
+            SizedBox(
+              height: 16,
             ),
-          )
-        ],
+            isActive
+                ? Row(
+                    children: [
+                      Image.asset(
+                        'assets/icon_star.png',
+                        width: 14,
+                      ),
+                      Image.asset(
+                        'assets/icon_star.png',
+                        width: 14,
+                      ),
+                      Image.asset(
+                        'assets/icon_star.png',
+                        width: 14,
+                      ),
+                      Image.asset(
+                        'assets/icon_star.png',
+                        width: 14,
+                      ),
+                      Image.asset(
+                        'assets/icon_star0.png',
+                        width: 14,
+                      ),
+                    ],
+                  )
+                : Container(),
+            SizedBox(
+              height: 7,
+            ),
+            Text(
+              title,
+              style: blackTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
+              ),
+            ),
+            SizedBox(
+              height: 4,
+            ),
+            Text(
+              subtitle,
+              style: blackTextStyle.copyWith(
+                fontSize: 12,
+                fontWeight: medium,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

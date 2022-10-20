@@ -37,6 +37,7 @@ class _LoadingPageState extends State<LoadingPage> {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/image_loading.png'),
+                fit: BoxFit.cover,
               ),
             ),
           ),
