@@ -5,19 +5,19 @@ Color redColor = Color(0xffE51937);
 Color blackColor = Color(0xff0F1B2B);
 Color cyankColor = Color(0xff47CFFF);
 
-TextStyle cyanTextStyle = GoogleFonts.sourceSerifPro(
+TextStyle cyanTextStyle = GoogleFonts.poppins(
   color: cyankColor,
 );
 
-TextStyle blackTextStyle = GoogleFonts.sourceSerifPro(
+TextStyle blackTextStyle = GoogleFonts.poppins(
   color: blackColor,
 );
 
-TextStyle whiteTextStyle = GoogleFonts.sourceSerifPro(
+TextStyle whiteTextStyle = GoogleFonts.poppins(
   color: Colors.white,
 );
 
-TextStyle redTextStyle = GoogleFonts.sourceSerifPro(
+TextStyle redTextStyle = GoogleFonts.poppins(
   color: redColor,
 );
 

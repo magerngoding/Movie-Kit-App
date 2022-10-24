@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
+import 'package:movie_kit_app/widget/cast_crew.dart';
 
 class MovieDetailPage extends StatelessWidget {
   const MovieDetailPage({super.key});
@@ -220,6 +221,8 @@ class MovieDetailPage extends StatelessWidget {
                 ),
               ],
             ),
+
+            // NOTE : SYSNOPSIS
             Container(
               margin: EdgeInsets.only(left: 21),
               child: Column(
@@ -247,6 +250,155 @@ class MovieDetailPage extends StatelessWidget {
             ),
             SizedBox(
               height: 13,
+            ),
+
+            // NOTE : CAST & CREW
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Cast & Crew',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: medium,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'View all',
+                      style: TextStyle(
+                        fontWeight: medium,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 13,
+            ),
+            Column(
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                CastCrew(
+                  imageUrl: 'assets/people_keanu.png',
+                  name: 'Keanu Reeves',
+                  callName: 'JOHN WICK',
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CastCrew(
+                  imageUrl: 'assets/people_halle.png',
+                  name: 'Halle Berry',
+                  callName: 'SOFIA',
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CastCrew(
+                  imageUrl: 'assets/people_laurence.png',
+                  name: 'Laurence Fishburne',
+                  callName: 'BOWERY KING',
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 32,
+            ),
+
+            // NOTE : PHOTOS
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Photos',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: medium,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'View all',
+                      style: TextStyle(
+                        fontWeight: medium,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 18),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/photos1.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/photos2.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/photos3.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/photos4.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 32,
             ),
           ],
         ),
