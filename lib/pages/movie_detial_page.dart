@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
+import 'package:movie_kit_app/widget/blogs_about.dart';
 import 'package:movie_kit_app/widget/cast_crew.dart';
 
 class MovieDetailPage extends StatelessWidget {
@@ -307,7 +308,7 @@ class MovieDetailPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 32,
+              height: 30,
             ),
 
             // NOTE : PHOTOS
@@ -336,7 +337,7 @@ class MovieDetailPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 5,
             ),
             Container(
               margin: EdgeInsets.only(left: 18),
@@ -398,7 +399,149 @@ class MovieDetailPage extends StatelessWidget {
               ),
             ),
             SizedBox(
+              height: 30,
+            ),
+
+            // NOTE : VIDEOS
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Videos',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: medium,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'View all',
+                      style: TextStyle(
+                        fontWeight: medium,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 18),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/videos1.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Image.asset(
+                        'assets/icon_play.png',
+                        width: 24,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/videos2.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/videos3.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      width: 104,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/photos4.png'),
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
               height: 32,
+            ),
+
+            // NOTE : Blogs
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Blogs About This Film',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: medium,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'View all',
+                      style: TextStyle(
+                        fontWeight: medium,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                BlogsAbout(
+                  imageUrl: 'assets/blogs1.png',
+                  time: '3 hours ago',
+                  name: 'Female Action Stars\nWe Cant Wait',
+                ),
+                BlogsAbout(
+                  imageUrl: 'assets/blogs2.png',
+                  time: '5 hours ago',
+                  name: 'The Best John Wick\nAction Scenes',
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 24,
             ),
           ],
         ),
