@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
+import 'package:movie_kit_app/widget/bottom_navbar_item.dart';
 import 'package:movie_kit_app/widget/content_movie.dart';
 
 class HomePage extends StatelessWidget {
@@ -147,11 +148,43 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 60,
+                )
               ],
             ),
           ),
         ),
       ),
+      floatingActionButton: Container(
+        height: 49,
+        width: MediaQuery.of(context).size.width,
+        margin: EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+          color: Colors.white,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            BottomNavbarItem(
+              imageUrl: 'assets/icon_movie.png',
+              isActive: true,
+            ),
+            BottomNavbarItem(
+              imageUrl: 'assets/icon_tix.png',
+            ),
+            BottomNavbarItem(
+              imageUrl: 'assets/icon_bel.png',
+              width: 20,
+            ),
+            BottomNavbarItem(
+              imageUrl: 'assets/icon_person.png',
+              width: 20,
+            )
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
     );
   }
 }

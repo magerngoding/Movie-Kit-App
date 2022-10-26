@@ -34,7 +34,7 @@ class CastCrew extends StatelessWidget {
           Text(
             name,
             style: blackTextStyle.copyWith(
-              fontWeight: medium,
+              fontWeight: semiBold,
             ),
           ),
           Container(

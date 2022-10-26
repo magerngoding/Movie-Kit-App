@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:movie_kit_app/pages/movie_detial_page.dart';
+import 'package:movie_kit_app/pages/movie_detail_page.dart';
+
 import 'package:movie_kit_app/shared/theme.dart';
 
 class ContentMovie extends StatelessWidget {

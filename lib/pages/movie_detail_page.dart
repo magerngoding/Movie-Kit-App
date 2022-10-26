@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:movie_kit_app/pages/cast_crew_page.dart';
+import 'package:movie_kit_app/pages/photos_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 import 'package:movie_kit_app/widget/blogs_about.dart';
 import 'package:movie_kit_app/widget/cast_crew.dart';
@@ -267,7 +269,14 @@ class MovieDetailPage extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CastCrewPage(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'View all',
                       style: TextStyle(
@@ -325,7 +334,14 @@ class MovieDetailPage extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PhotosPage(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'View all',
                       style: TextStyle(
