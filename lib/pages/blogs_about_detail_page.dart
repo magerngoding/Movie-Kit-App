@@ -1,11 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:movie_kit_app/pages/blogs_about_detail_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 
-class BlogsAboutPage extends StatelessWidget {
-  const BlogsAboutPage({super.key});
+class BlogsAboutDetailPage extends StatelessWidget {
+  const BlogsAboutDetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +28,26 @@ class BlogsAboutPage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 85,
+                      width: 60,
                     ),
                     Text(
-                      'Blog About This Film',
+                      'Female Action Stars We...',
                       style: blackTextStyle.copyWith(
-                          fontSize: 18, fontWeight: semiBold),
+                        fontSize: 18,
+                        fontWeight: semiBold,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Image.asset(
+                        'assets/icon_continue.png',
+                        color: blackColor,
+                        width: 24,
+                      ),
                     ),
                   ],
                 ),
@@ -81,55 +94,23 @@ class BlogsAboutPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 4,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => BlogsAboutDetailPage(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Female Action Stars We Cant Wait',
-                      style: blackTextStyle.copyWith(
-                        fontSize: 18,
-                        fontWeight: medium,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    width: 340,
-                    height: 168,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/blogs4.png'),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
                     height: 16,
                   ),
                   Text(
-                    '2 hours ago',
+                    'John Wick is now a marked man on the run in\n Manhattan. He is declared "excommunicado" by\n The High Table which places \$14 million contract\n bounty on his head as a result of Wick\'s\n unauthorized killing of High Table.',
                     style: blackTextStyle.copyWith(
                       fontSize: 14,
                       fontWeight: regular,
                     ),
                   ),
                   SizedBox(
-                    height: 4,
+                    height: 20,
                   ),
                   Text(
-                    'The Best Action John Wick Action Scenes',
+                    'At first, Wick travels to the New York Public Library\n and retrieves two concealed items–a "marker"\n (medallion) and a crucifix necklace. Wick leaves\n but is pursued by a gang into an antique\n warehouse which leads to a bloody fight between\n Wick and the gang involving antique weaponry.',
                     style: blackTextStyle.copyWith(
-                      fontSize: 16,
-                      fontWeight: medium,
+                      fontSize: 14,
+                      fontWeight: regular,
                     ),
                   ),
                   SizedBox(
@@ -140,32 +121,12 @@ class BlogsAboutPage extends StatelessWidget {
                     height: 168,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/blogs5.png'),
+                        image: AssetImage('assets/blogs6.png'),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 16,
-                  ),
-                  Text(
-                    '1 hours ago',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 14,
-                      fontWeight: regular,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Text(
-                    'Nice...!',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 16,
-                      fontWeight: medium,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 24,
+                    height: 30,
                   ),
                 ],
               ),
