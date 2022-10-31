@@ -5,13 +5,13 @@ import 'package:movie_kit_app/pages/movie_detail_page.dart';
 
 import 'package:movie_kit_app/shared/theme.dart';
 
-class ContentMovie extends StatelessWidget {
+class CustomeContentMovie extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String subtitle;
   final bool isActive;
 
-  ContentMovie({
+  CustomeContentMovie({
     required this.imageUrl,
     required this.title,
     required this.subtitle,

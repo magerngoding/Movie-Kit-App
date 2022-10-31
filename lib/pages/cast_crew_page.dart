@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
-import 'package:movie_kit_app/widget/cast_crew.dart';
+import 'package:movie_kit_app/widget/custome_cast_crew.dart';
 
 class CastCrewPage extends StatelessWidget {
   const CastCrewPage({super.key});
@@ -57,7 +57,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_keanu.png',
               name: 'Keanu Reeves',
               callName: 'JOHN WICK',
@@ -65,7 +65,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_halle.png',
               name: 'Halle Berry',
               callName: 'SOFIA',
@@ -73,7 +73,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_laurence.png',
               name: 'Laurence Fishburne',
               callName: 'BOWERY KING',
@@ -81,7 +81,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_mark.png',
               name: 'Mark Dancos',
               callName: 'ZERO',
@@ -89,7 +89,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_asia.png',
               name: 'Asia Kalte Dillon',
               callName: 'ADJUDICATOR',
@@ -97,7 +97,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_lance.png',
               name: 'Lance Reddick',
               callName: 'CHARON',
@@ -105,7 +105,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_anjelica.png',
               name: 'Anjelica Huston',
               callName: 'DIRECTOR',
@@ -113,7 +113,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_margaret.png',
               name: 'Margaret Daly',
               callName: 'OPERATOR',
@@ -121,7 +121,7 @@ class CastCrewPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CastCrew(
+            CustomeCastCrew(
               imageUrl: 'assets/people_jerome.png',
               name: 'Jerome Flynn',
               callName: 'BERRADA',

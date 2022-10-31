@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 Color redColor = Color(0xffE51937);
 Color blackColor = Color(0xff0F1B2B);
 Color cyankColor = Color(0xff47CFFF);
+Color greenColor = Color(0xff4CD964);
 
 TextStyle cyanTextStyle = GoogleFonts.poppins(
   color: cyankColor,

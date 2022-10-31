@@ -3,12 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 
-class CastCrew extends StatelessWidget {
+class CustomeCastCrew extends StatelessWidget {
   final String imageUrl;
   final String name;
   final String callName;
 
-  CastCrew({
+  CustomeCastCrew({
     required this.imageUrl,
     required this.name,
     required this.callName,

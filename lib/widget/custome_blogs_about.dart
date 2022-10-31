@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 
-class BlogsAbout extends StatelessWidget {
+class CustomeBlogsAbout extends StatelessWidget {
   final String imageUrl;
   final String time;
   final String name;
-  BlogsAbout({
+  CustomeBlogsAbout({
     required this.imageUrl,
     required this.time,
     required this.name,

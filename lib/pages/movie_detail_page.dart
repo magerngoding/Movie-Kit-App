@@ -6,8 +6,8 @@ import 'package:movie_kit_app/pages/cast_crew_page.dart';
 import 'package:movie_kit_app/pages/photos_page.dart';
 import 'package:movie_kit_app/pages/videos_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
-import 'package:movie_kit_app/widget/blogs_about.dart';
-import 'package:movie_kit_app/widget/cast_crew.dart';
+import 'package:movie_kit_app/widget/custome_blogs_about.dart';
+import 'package:movie_kit_app/widget/custome_cast_crew.dart';
 
 class MovieDetailPage extends StatelessWidget {
   const MovieDetailPage({super.key});
@@ -295,7 +295,7 @@ class MovieDetailPage extends StatelessWidget {
             Column(
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                CastCrew(
+                CustomeCastCrew(
                   imageUrl: 'assets/people_keanu.png',
                   name: 'Keanu Reeves',
                   callName: 'JOHN WICK',
@@ -303,7 +303,7 @@ class MovieDetailPage extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                CastCrew(
+                CustomeCastCrew(
                   imageUrl: 'assets/people_halle.png',
                   name: 'Halle Berry',
                   callName: 'SOFIA',
@@ -311,7 +311,7 @@ class MovieDetailPage extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                CastCrew(
+                CustomeCastCrew(
                   imageUrl: 'assets/people_laurence.png',
                   name: 'Laurence Fishburne',
                   callName: 'BOWERY KING',
@@ -560,12 +560,12 @@ class MovieDetailPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                BlogsAbout(
+                CustomeBlogsAbout(
                   imageUrl: 'assets/blogs1.png',
                   time: '3 hours ago',
                   name: 'Female Action Stars\nWe Cant Wait',
                 ),
-                BlogsAbout(
+                CustomeBlogsAbout(
                   imageUrl: 'assets/blogs2.png',
                   time: '5 hours ago',
                   name: 'The Best John Wick\nAction Scenes',

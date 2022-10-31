@@ -1,9 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie_kit_app/cubit/page_cubit.dart';
+import 'package:movie_kit_app/pages/notifications_page.dart';
+import 'package:movie_kit_app/pages/profile_page.dart';
+import 'package:movie_kit_app/pages/tickets_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
-import 'package:movie_kit_app/widget/bottom_navbar_item.dart';
-import 'package:movie_kit_app/widget/content_movie.dart';
+import 'package:movie_kit_app/widget/custome_bottom_navbar_item.dart';
+import 'package:movie_kit_app/widget/custome_content_movie.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,6 +22,7 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.all(18),
             child: Column(
               children: [
+                //   buildContent(currentIndex),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -115,13 +121,13 @@ class HomePage extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        ContentMovie(
+                        CustomeContentMovie(
                           imageUrl: 'assets/image_johnwick.png',
                           title: 'John Wick 3',
                           subtitle: 'Crime  • 2h 10m | R',
                           isActive: true,
                         ),
-                        ContentMovie(
+                        CustomeContentMovie(
                           imageUrl: 'assets/image_bladerunner.png',
                           title: 'Captain Marvel',
                           subtitle: 'Action  • 2h 25m | PG-13',
@@ -134,13 +140,13 @@ class HomePage extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ContentMovie(
+                    CustomeContentMovie(
                       imageUrl: 'assets/image_alta.png',
                       title: 'Alta Batle Angel',
                       subtitle: 'Action  • 2h 25m | PG-13',
                       isActive: true,
                     ),
-                    ContentMovie(
+                    CustomeContentMovie(
                       imageUrl: 'assets/image_avengers.png',
                       title: 'Avengers',
                       subtitle: 'Action  • 2h 25m | PG-13',
@@ -150,7 +156,7 @@ class HomePage extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 60,
-                )
+                ),
               ],
             ),
           ),
@@ -166,18 +172,21 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            BottomNavbarItem(
+            CustomeBottomNavbarItem(
+              index: 0,
               imageUrl: 'assets/icon_movie.png',
-              isActive: true,
             ),
-            BottomNavbarItem(
+            CustomeBottomNavbarItem(
+              index: 1,
               imageUrl: 'assets/icon_tix.png',
             ),
-            BottomNavbarItem(
+            CustomeBottomNavbarItem(
+              index: 2,
               imageUrl: 'assets/icon_bel.png',
               width: 20,
             ),
-            BottomNavbarItem(
+            CustomeBottomNavbarItem(
+              index: 3,
               imageUrl: 'assets/icon_person.png',
               width: 20,
             )
