@@ -1,11 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_kit_app/cubit/page_cubit.dart';
 import 'package:movie_kit_app/pages/notifications_page.dart';
-import 'package:movie_kit_app/pages/profile_page.dart';
 import 'package:movie_kit_app/pages/tickets_page.dart';
+
 import 'package:movie_kit_app/shared/theme.dart';
 import 'package:movie_kit_app/widget/custome_bottom_navbar_item.dart';
 import 'package:movie_kit_app/widget/custome_content_movie.dart';
@@ -155,7 +153,47 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 60,
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NotificationsPage(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Notification Page',
+                        style: TextStyle(
+                          fontWeight: medium,
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TicketsPage(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Tickets Page',
+                        style: TextStyle(
+                          fontWeight: medium,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 50,
                 ),
               ],
             ),
@@ -175,6 +213,7 @@ class HomePage extends StatelessWidget {
             CustomeBottomNavbarItem(
               index: 0,
               imageUrl: 'assets/icon_movie.png',
+              isActive: true,
             ),
             CustomeBottomNavbarItem(
               index: 1,
@@ -193,7 +232,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
