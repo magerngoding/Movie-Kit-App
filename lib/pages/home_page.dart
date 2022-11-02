@@ -117,7 +117,6 @@ class HomePage extends StatelessWidget {
                 Column(
                   children: [
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CustomeContentMovie(
                           imageUrl: 'assets/image_johnwick.png',
@@ -185,6 +184,22 @@ class HomePage extends StatelessWidget {
                       },
                       child: Text(
                         'Tickets Page',
+                        style: TextStyle(
+                          fontWeight: medium,
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TicketsPage(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Profile Page',
                         style: TextStyle(
                           fontWeight: medium,
                         ),
