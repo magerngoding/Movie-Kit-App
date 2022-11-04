@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/pages/notifications_page.dart';
+import 'package:movie_kit_app/pages/profile_page.dart';
 import 'package:movie_kit_app/pages/tickets_page.dart';
 
 import 'package:movie_kit_app/shared/theme.dart';
@@ -194,7 +195,7 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => TicketsPage(),
+                            builder: (context) => ProfilePage(),
                           ),
                         );
                       },
@@ -220,8 +221,7 @@ class HomePage extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         margin: EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
-          color: Colors.white,
-        ),
+            color: Color(0xffE5E5E5), borderRadius: BorderRadius.circular(20)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

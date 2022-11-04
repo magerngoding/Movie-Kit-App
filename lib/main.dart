@@ -13,9 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xffE5E5E5),
-      ),
       debugShowCheckedModeBanner: false,
       home: LoadingPage(),
     );

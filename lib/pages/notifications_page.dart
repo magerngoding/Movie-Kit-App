@@ -9,7 +9,6 @@ class NotificationsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffE5E5E5),
       body: SafeArea(
         child: ListView(
           children: [
