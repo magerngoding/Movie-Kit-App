@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/shared/theme.dart';
-import 'package:movie_kit_app/widget/custome_text_from_field.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -25,23 +24,6 @@ class ProfilePage extends StatelessWidget {
                         style: blackTextStyle.copyWith(
                           fontSize: 24,
                           fontWeight: semiBold,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ProfilePage(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'Sign Up',
-                          style: redTextStyle.copyWith(
-                            fontSize: 16,
-                            fontWeight: semiBold,
-                          ),
                         ),
                       ),
                     ],
@@ -68,141 +50,101 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20,
-                right: 20,
-                top: 50,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'USER NAME',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  Text(
-                    'PASSWORD',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.lock),
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 80,
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 25),
-                    width: 324,
-                    height: 48,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        backgroundColor: redColor,
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        'Login',
-                        style: whiteTextStyle.copyWith(
-                          fontSize: 16,
-                          fontWeight: semiBold,
-                        ),
+            Column(
+              children: [
+                Container(
+                  width: 104,
+                  height: 104,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(
+                        'assets/image_profile.jpg',
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 44,
-                        height: 44,
-                        margin: EdgeInsets.only(left: 18, right: 16),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0xff1AA9E1),
-                        ),
-                        child: Container(
-                          width: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/icon_twitter.png',
-                              ),
-                            ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Siraj Hafizh',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 24,
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      width: 69,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: Color(0xff19E58F).withOpacity(0.2),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'MEMBER',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: semiBold,
+                            color: Color(0xff19E58F),
                           ),
                         ),
                       ),
-                      Container(
-                        width: 44,
-                        height: 44,
-                        margin: EdgeInsets.only(left: 18, right: 16),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0xff3B5A9A),
-                        ),
-                        child: Container(
-                          width: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/icon_fb.png',
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: 44,
-                        height: 44,
-                        margin: EdgeInsets.only(left: 18, right: 16),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0xffCB3E2D),
-                        ),
-                        child: Container(
-                          width: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/icon_googleplus.png',
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
+                  ],
+                ),
+                Text(
+                  'sirajh611@gmail.com',
+                  style: blackTextStyle.copyWith(
+                    fontWeight: light,
+                    fontSize: 14,
                   ),
-                ],
-              ),
-            ),
+                ),
+                SizedBox(
+                  height: 52,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          '123',
+                          style: blackTextStyle.copyWith(
+                              fontSize: 30, fontWeight: semiBold),
+                        ),
+                        Text(
+                          'TOTAL POINTS',
+                          style: blackTextStyle.copyWith(
+                              fontSize: 12, fontWeight: medium),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          '06',
+                          style: blackTextStyle.copyWith(
+                              fontSize: 30, fontWeight: semiBold),
+                        ),
+                        Text(
+                          'MOVIE WATCHED',
+                          style: blackTextStyle.copyWith(
+                              fontSize: 12, fontWeight: medium),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            )
           ],
         ),
       ),
