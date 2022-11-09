@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/pages/account_information_page.dart';
+import 'package:movie_kit_app/pages/transacion_history_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 import 'package:movie_kit_app/widget/custome_bottom_navbar_item.dart';
 
@@ -214,7 +215,14 @@ class ProfilePage extends StatelessWidget {
                     width: 13,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TransactionHistory(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'Transaction History',
                       style: blackTextStyle.copyWith(

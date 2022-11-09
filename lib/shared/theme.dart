@@ -14,6 +14,9 @@ TextStyle cyanTextStyle = GoogleFonts.poppins(
 TextStyle blackTextStyle = GoogleFonts.poppins(
   color: blackColor,
 );
+TextStyle greenTextStyle = GoogleFonts.poppins(
+  color: greenColor,
+);
 
 TextStyle whiteTextStyle = GoogleFonts.poppins(
   color: Colors.white,
