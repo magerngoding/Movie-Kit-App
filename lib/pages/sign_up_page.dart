@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_kit_app/pages/profile_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
+import 'package:movie_kit_app/widget/custome_button.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -176,30 +177,16 @@ class SignUpPage extends StatelessWidget {
                   SizedBox(
                     height: 70,
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 25),
-                    width: 324,
-                    height: 48,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        backgroundColor: redColor,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProfilePage(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        'Create Account',
-                        style: whiteTextStyle.copyWith(
-                          fontSize: 16,
-                          fontWeight: semiBold,
+                  CustomeButton(
+                    title: 'Create Account',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfilePage(),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
                   SizedBox(
                     height: 50,

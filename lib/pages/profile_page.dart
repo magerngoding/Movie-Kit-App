@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:movie_kit_app/pages/account_information_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
+import 'package:movie_kit_app/widget/custome_bottom_navbar_item.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -142,12 +144,198 @@ class ProfilePage extends StatelessWidget {
                       ],
                     )
                   ],
-                )
+                ),
               ],
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              width: 340,
+              height: 44,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 14,
+                  ),
+                  Icon(
+                    Icons.person,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 13,
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AccountInformationPage(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Account Information',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 14,
+                        fontWeight: regular,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              width: 340,
+              height: 44,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 14,
+                  ),
+                  Icon(
+                    Icons.monetization_on_rounded,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 13,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Transaction History',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 14,
+                        fontWeight: regular,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              width: 340,
+              height: 44,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 14,
+                  ),
+                  Icon(
+                    Icons.star_half_sharp,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 13,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Rating App',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 14,
+                        fontWeight: regular,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              width: 340,
+              height: 44,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 14,
+                  ),
+                  Icon(
+                    Icons.folder,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 13,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Privacy Policy',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 14,
+                        fontWeight: regular,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 80,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: Container(
+        height: 49,
+        width: MediaQuery.of(context).size.width,
+        margin: EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            CustomeBottomNavbarItem(
+              index: 0,
+              imageUrl: 'assets/icon_movie.png',
+            ),
+            CustomeBottomNavbarItem(
+              index: 1,
+              imageUrl: 'assets/icon_tix.png',
+            ),
+            CustomeBottomNavbarItem(
+              index: 2,
+              imageUrl: 'assets/icon_bel.png',
+              width: 20,
+            ),
+            CustomeBottomNavbarItem(
+              index: 3,
+              imageUrl: 'assets/icon_person.png',
+              width: 20,
+              isActive: true,
             )
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

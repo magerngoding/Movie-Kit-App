@@ -5,6 +5,7 @@ import 'package:movie_kit_app/pages/profile_page.dart';
 import 'package:movie_kit_app/pages/sign_up_page.dart';
 import 'package:movie_kit_app/shared/theme.dart';
 import 'package:movie_kit_app/widget/custome_bottom_navbar_item.dart';
+import 'package:movie_kit_app/widget/custome_button.dart';
 import 'package:movie_kit_app/widget/custome_text_from_field.dart';
 
 class LoginPage extends StatelessWidget {
@@ -120,30 +121,16 @@ class LoginPage extends StatelessWidget {
                   SizedBox(
                     height: 80,
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 25),
-                    width: 324,
-                    height: 48,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        backgroundColor: redColor,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProfilePage(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        'Login',
-                        style: whiteTextStyle.copyWith(
-                          fontSize: 16,
-                          fontWeight: semiBold,
+                  CustomeButton(
+                    title: 'Login',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfilePage(),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
                   SizedBox(
                     height: 100,
