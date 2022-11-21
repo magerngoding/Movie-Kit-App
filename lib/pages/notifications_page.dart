@@ -65,11 +65,10 @@ class NotificationsPage extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: greenColor.withOpacity(0.3),
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/icon_like.png'),
-                          ),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/icon_like.png',
+                          width: 20,
                         ),
                       ),
                     ),
@@ -128,11 +127,10 @@ class NotificationsPage extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: redColor.withOpacity(0.3),
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/icon_bels.png'),
-                          ),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/icon_bels.png',
+                          width: 20,
                         ),
                       ),
                     ),
@@ -197,11 +195,10 @@ class NotificationsPage extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: yellowColor.withOpacity(0.3),
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/icon_dollar.png'),
-                          ),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/icon_dollar.png',
+                          width: 20,
                         ),
                       ),
                     ),
@@ -251,11 +248,10 @@ class NotificationsPage extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: cyankColor.withOpacity(0.3),
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/icon_persen.png'),
-                          ),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/icon_persen.png',
+                          width: 20,
                         ),
                       ),
                     ),
@@ -305,11 +301,10 @@ class NotificationsPage extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: greenColor.withOpacity(0.3),
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/icon_like.png'),
-                          ),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/icon_like.png',
+                          width: 20,
                         ),
                       ),
                     ),

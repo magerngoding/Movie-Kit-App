@@ -146,14 +146,10 @@ class LoginPage extends StatelessWidget {
                           shape: BoxShape.circle,
                           color: Color(0xff1AA9E1),
                         ),
-                        child: Container(
-                          width: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/icon_twitter.png',
-                              ),
-                            ),
+                        child: Center(
+                          child: Image.asset(
+                            'assets/icon_twitter.png',
+                            width: 20,
                           ),
                         ),
                       ),
@@ -165,14 +161,10 @@ class LoginPage extends StatelessWidget {
                           shape: BoxShape.circle,
                           color: Color(0xff3B5A9A),
                         ),
-                        child: Container(
-                          width: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/icon_fb.png',
-                              ),
-                            ),
+                        child: Center(
+                          child: Image.asset(
+                            'assets/icon_fb.png',
+                            width: 20,
                           ),
                         ),
                       ),
@@ -184,14 +176,10 @@ class LoginPage extends StatelessWidget {
                           shape: BoxShape.circle,
                           color: Color(0xffCB3E2D),
                         ),
-                        child: Container(
-                          width: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/icon_googleplus.png',
-                              ),
-                            ),
+                        child: Center(
+                          child: Image.asset(
+                            'assets/icon_googleplus.png',
+                            width: 20,
                           ),
                         ),
                       ),
